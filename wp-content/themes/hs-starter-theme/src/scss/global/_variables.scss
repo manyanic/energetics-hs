@@ -1,0 +1,11 @@
+// breakpoint variables (mobile-portrait by default)
+$small: 576px; // Mobile-landscape (and larger)
+$medium: 768px; // Tablet-portrait (and larger)
+$large: 992px; // Tablet-landscape (and larger)
+$extra-large: 1200px; // Laptops (and langer)
+
+// wrapper
+$wrapper-max-width: $large;
+
+// font variables
+$default-font-size-in-px: 16;

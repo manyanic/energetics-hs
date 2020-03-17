@@ -1,0 +1,22 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1em;
+}
+
+.wrapper {
+    max-width: $wrapper-max-width;
+    margin: 0 auto;
+}
+
+.barba-container {
+    &.barba-container--fadein {
+      animation: fadeIn 0.4s ease forwards;
+    }
+    &.barba-container--fadeout {
+      animation: fadeOut 0.4s ease forwards;
+    }
+}

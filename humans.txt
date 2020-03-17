@@ -1,0 +1,13 @@
+/* TEAM */
+	Agency: herraizsoto&co.
+	Contact: hello@herraizsoto.com
+	From: Barcelona, Catalonia, Spain
+
+	Developer: Jordi Matamales
+	From: Barcelona, Catalonia, Spain
+		
+/* SITE */
+	Last update: 2018/10
+	Language: English / Castellano / Français
+	Doctype: HTML5
+	IDE: Wordpress, WPML, ACF, Visual Studio Code, Local by Flywheel

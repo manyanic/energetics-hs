@@ -1,0 +1,72 @@
+input.header__menu-toogle,
+label.header__menu-toogle {
+    display: none;
+}
+
+label.header__menu-toogle {
+    padding: 10px 20px;
+}
+
+@media (max-width: $large) {
+    input.header__menu-toogle,
+    .header__menu-toogle span {
+        display: none;
+    }
+    input[type=checkbox]:checked ~ .header__menu-container .header__menu,
+    label.header__menu-toogle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.header__menu {
+    ul {
+        ul {
+            //second nav
+            display: none;
+            li {
+                float: none;
+            }
+        }
+    }
+    li {
+        float: left;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 20px 5px 0;
+            padding: 8px 10px;
+            &:link,
+            &:visited {
+                color: $dark;
+                &:hover {
+                    color: $dark;
+                }
+            }
+        }
+        &:hover ul {
+            display: block;
+            position: absolute;
+        }
+    }
+    @media (max-width: $large) {
+        display: none;
+        li {
+            float: none;
+            &:hover ul {
+                display: block;
+                position: relative;
+            }
+            ul {
+                display: block;
+                li {
+                    margin-left: 20px;
+                }
+            }
+            a {
+                display: block;
+                margin-left: 20px;
+            }
+        }
+    }
+}

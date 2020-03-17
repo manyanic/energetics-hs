@@ -1,0 +1,23 @@
+# WordPress Coding Standards
+# https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/
+root = true
+[*.php]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+# StandardJS
+# https://standardjs.com
+[*.js]
+indent_style = space
+indent_size = 2
+# SCSS files
+# https://github.com/kristerkari/stylelint-scss/blob/master/.editorconfig
+[*.scss]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
