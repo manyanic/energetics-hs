@@ -15,7 +15,7 @@
  * Load scripts and styles.
  *
  * @since 1.0.0
- * 
+ *
  */
 function hs_load_scripts_and_styles() {
 
@@ -59,7 +59,7 @@ add_theme_support( 'html5', array(
  * Register the menus.
  *
  * @since 1.0.0
- * 
+ *
  */
 function hs_register_menus() {
 	register_nav_menu('header-menu',__( 'Header Menu', 'hs-starter-theme' ));
@@ -76,7 +76,7 @@ add_action( 'init', 'hs_register_menus' );
  * Disable ACF on the front-end.
  *
  * @since 1.0.0
- * 
+ *
  */
 function hs_disable_frontend_acf( $plugins ) {
 	if( is_admin() )
@@ -92,7 +92,7 @@ add_filter( 'option_active_plugins', 'hs_disable_frontend_acf' );
  * Get template parts from ACF sections flexible content field
  *
  * @since 1.0.0
- * 
+ *
  */
 function hs_get_flexible_content() {
 
@@ -101,7 +101,10 @@ function hs_get_flexible_content() {
 	if ($rows) {
 		foreach( (array) $rows as $count => $row ) {
 			set_query_var( 'count', $count );
+			echo $count;
+			echo $row;
 			get_template_part( 'template-parts/sections/' . $row );
+			get_template_part( 'template-parts/sections/' . 'hero' );
 		}
 	}
 
@@ -124,7 +127,7 @@ if ( function_exists( 'icl_get_languages' ) ) {
  * Get WPML local code.
  *
  * @since 1.0.0
- * 
+ *
  * @param string $lang The language.
  */
 function hs_wpml_get_code( $lang = "" ) {
@@ -142,7 +145,7 @@ function hs_wpml_get_code( $lang = "" ) {
  * Print the WPML language selector.
  *
  * @since 1.0.0
- * 
+ *
  */
 function hs_language_selector() {
 
@@ -173,7 +176,7 @@ add_filter( 'jpeg_quality', create_function( '', 'return 70;' ) );
  * Add new image sizes.
  *
  * @since 1.0.0
- * 
+ *
  */
 function hs_custom_image_sizes() {
 	add_image_size( 'large-retina', 2048, 2048 );
@@ -223,7 +226,7 @@ function hs_adaptative_image( $image_id, $img_width = 0, $img_height = 0, $large
 		if ( $img_width !== 0 ) {
 			$width = " width=\"" . $img_width . "\"";
 		}
-	
+
 		if ( $img_height !== 0 ) {
 			$height = " height=\"" . $img_height . "\"";
 		}
@@ -293,7 +296,7 @@ function hs_translation_links() {
         foreach ( $languages as $lang ) {
             array_push( $links, $lang['url'] );
 		}
-		
+
 		echo "<input type=\"hidden\" id=\"translation-links\" name=\"translation-links\" value=\"" . implode( ",", $links ) . "\">";
     }
 }
