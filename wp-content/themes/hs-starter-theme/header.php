@@ -99,6 +99,12 @@ if ( function_exists( 'icl_object_id' ) ) {
     <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/images/icons/manifest.json">
     <!-- End icons -->
 
+	<!-- Add Font -->
+
+	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+	<!-- End Add Font -->
+
     <!-- Google Analytics -->
     <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
